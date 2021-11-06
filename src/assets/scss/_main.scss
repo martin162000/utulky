@@ -20,14 +20,14 @@
     justify-content: flex-start;
     align-items: flex-start;
   
-    .pageButtons {
+    .pageSteps {
   
       display: flex;
       flex-direction: row;
       align-items: center;
       padding: 0px;
   
-      .button {
+      .step {
   
         width: 21px;
         height: 6px;
@@ -49,15 +49,6 @@
     }
   }
   
-  h1 {
-    font-family: 'Hind', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 46px;
-    line-height: 52px;
-    letter-spacing: 0.01em;
-    color: #000000;
-  }
 
   .continueBtn {
     padding: 20px 24px;
