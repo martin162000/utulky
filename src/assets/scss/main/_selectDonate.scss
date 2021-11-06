@@ -1,0 +1,102 @@
+
+
+.donateGroup {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+}
+
+  .donate  {
+    font-weight: bold;
+    margin-top: 40px;
+
+    .info {
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 19px;
+        color: #2F2F2F;
+    }
+
+
+    .radioText {
+        background: #FFFFFF;
+        border: 1px solid #DFDFDF;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-weight: 800;
+        font-size: 16px;
+        color: #2F2F2F;
+        padding: 16px;
+      }
+
+    .customAmount {
+        width: 85px;
+        position: relative;
+        background: #FFFFFF;
+        border: 1px solid #DFDFDF;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-weight: 800;
+        font-size: 16px;
+        color: #2F2F2F;
+        padding: 16px;
+        height: 55px;
+
+        span {
+            position: absolute;
+            right: 9px;
+        }
+      }
+
+      .inputAmount {
+        width: 42px;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 21px;
+        color: #2F2F2F;
+        border: none;
+        border-bottom: 1px solid #C9C9C9;
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+
+      }
+
+
+
+      .radioControl {
+        height: 53px;
+        position: relative;
+        display: inline-block;
+        margin-right: 7px;
+        font-size: 1rem;
+        cursor: pointer;
+        z-index: 12;
+
+        input[type="radio"] {
+            display: none;
+          }
+
+      }
+
+  }
+
+  
+
+
+  .donate .radioControl input:checked ~ .radioText,
+  .donate .customAmount.selected {
+    background: linear-gradient(115.41deg, #CD8A64 -1.77%, #C4794F 73.03%);
+    color: white;
+    
+    input {
+        background: transparent;
+        color:white;
+        border-bottom: 1px solid white;
+    }
+  }
