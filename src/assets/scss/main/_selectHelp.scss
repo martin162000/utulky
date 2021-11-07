@@ -4,6 +4,7 @@
   flex-direction: row;
   align-items: center;
   padding: 0px;
+  position: relative;
 
 input[type="radio"] {
     display: none;
@@ -90,6 +91,10 @@ input[type="radio"] {
       left: 24px;
       bottom: 24px;
     }
+  }
+
+  .spanError {
+    top:-32px;
   }
 
 }

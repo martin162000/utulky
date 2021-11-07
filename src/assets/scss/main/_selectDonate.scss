@@ -11,6 +11,11 @@
   .donate  {
     font-weight: bold;
     margin-top: 40px;
+    position: relative;
+
+    .spanError {
+      top: 4px;
+    }
 
     .info {
         font-weight: 800;
@@ -65,8 +70,22 @@
             outline: none;
         }
 
+
+
       }
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 
       .radioControl {
@@ -85,6 +104,7 @@
       }
 
   }
+
 
   
 

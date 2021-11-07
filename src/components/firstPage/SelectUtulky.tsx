@@ -3,8 +3,8 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 
 
+const SelectUtulky = (getAll:any)  => {
 
-const SelectUtulky = () => {
 
     const dispatch = useDispatch();
     const showState = useSelector((state:any) => state)
@@ -29,16 +29,15 @@ const SelectUtulky = () => {
 
 
 
-
     return (
         <div className="selectUtulok">
-            <span>*Povinné</span>
+            {getAll.err.utulok && <span className="spanError">{getAll.err.utulok}</span>}
             <label>O projekte</label>
             <label className="titileLabel">Útulok</label>
-            <select className="optionsUtulky" defaultValue={'DEFAULT'}  onChange={(e) => e.currentTarget.classList.add("selectedColor")}>
-                <option value="DEFAULT" disabled>Vyberte útulok zo zoznamu</option>
+            <select name="utulok" className="optionsUtulky" defaultValue={''} value={getAll.values.utulok} onChange={getAll.handleChange} >
+                <option value="" disabled>Vyberte útulok zo zoznamu</option>
                 {showState.utulky && showState.utulky.map((e:any) => (
-                        <option key={e.id} value={e.name}>{e.name}</option>
+                        <option key={e.id} value={e.name}>{e.name} </option>
                         ))}
             </select>
             
