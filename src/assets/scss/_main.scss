@@ -1,6 +1,7 @@
-@import './main/selectHelp';
-@import './main/selectUtulky';
-@import './main/selectDonate';
+@import './firstPage/selectHelp';
+@import './firstPage/selectUtulky';
+@import './firstPage/selectDonate';
+@import './secondPage/selectInfo';
 
 .main {
     background-size: 35%;
@@ -9,7 +10,8 @@
     background-repeat: no-repeat;
     margin: 100px auto;
     width: 1050px;
-    height: 100vh;
+    //height: 100vh;
+    min-height: 775px;
   } 
   
   .mainColumn {

@@ -16,7 +16,7 @@ const SelectUtulky = (getAll:any)  => {
                 const data:any = response.data.shelters
                 
                   dispatch({
-                    type: "ADD",
+                    type: "ADD_UTULKY",
                     data: data
                 });
 
@@ -34,7 +34,7 @@ const SelectUtulky = (getAll:any)  => {
             {getAll.err.utulok && <span className="spanError">{getAll.err.utulok}</span>}
             <label>O projekte</label>
             <label className="titileLabel">Útulok</label>
-            <select name="utulok" className="optionsUtulky" defaultValue={''} value={getAll.values.utulok} onChange={getAll.handleChange} >
+            <select name="utulok" className="optionsUtulky" value={getAll.values.utulok} onChange={getAll.handleChange} >
                 <option value="" disabled>Vyberte útulok zo zoznamu</option>
                 {showState.utulky && showState.utulky.map((e:any) => (
                         <option key={e.id} value={e.name}>{e.name} </option>

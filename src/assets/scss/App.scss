@@ -28,6 +28,10 @@ a {
     color: #585757;
 }
 
+form {
+    width: 100%;
+}
+
 .spanError {
     position: absolute;
     right: 0;
@@ -41,9 +45,9 @@ a {
 
 
 footer {
-    margin-top: 130px;
+    margin: 0 auto;
     width: 1140px;
-    height: 400px;
+    height: 380px;
     border-top: 1px solid rgba(47, 47, 47, 0.16);
 
     display: grid;

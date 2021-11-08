@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 const useForm = (validateForm:any) => {
+
+    const dispatch = useDispatch();
+
+
     const [values, setValues] = useState({
         typeHelp: '',
         utulok: '',
@@ -8,6 +13,9 @@ const useForm = (validateForm:any) => {
         customAmount: ''
 
     })
+
+
+ const [isSubmit, setIsSubmit] = useState(false)   
 
 
 const [errors, setErrors] = useState({})
@@ -47,7 +55,20 @@ const handleChange = (e:any) => {
 const handleSubmit = (e:any) => {
     e.preventDefault();
     setErrors(validateForm(values));
+    setIsSubmit(true)
 }
+
+useEffect(() => {
+
+    if(Object.keys(errors).length === 0 && isSubmit === true) {
+        dispatch({
+            type: "ADD_DATA",
+            data: values
+        });
+        setIsSubmit(false)
+    } 
+}, [isSubmit,errors,values,dispatch])
+
 
     return {handleChange, values, handleSubmit, errors}
 

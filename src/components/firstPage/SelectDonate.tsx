@@ -4,19 +4,15 @@ import React, { useState } from 'react'
 const SelectDonate = (getAll:any) => {
       
   const checkClickedAmount = (e:any) => { 
-    //const customValue = document.querySelector<HTMLElement>('input[name=customAmount]')!;
     const customValueParent = document.querySelector<HTMLElement>('.customAmount')!;
 
 
-     // e.target.classList.remove('inputAmount');
      if(e.target.classList.contains('inputAmount')) {
        customValueParent.classList.add("selected");
        getAll.handleChange(e)
-     //  customValue.setAttribute("checked", "true");
        Array.from( document.querySelectorAll('input[name=amount]:checked'), (input:any) => input.checked = false );
      } else {
       customValueParent.classList.remove("selected");
-      //customValue.setAttribute("value", "66666");
         
      }
  };

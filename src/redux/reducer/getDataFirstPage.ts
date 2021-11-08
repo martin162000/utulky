@@ -1,6 +1,6 @@
-const getUtulky = (state = false, action:any) => {
+const getDataFirstPage = (state = false, action:any) => {
     switch (action.type) {
-        case "ADD_UTULKY":
+        case "ADD_DATA":
             return action.data
     
         default:
@@ -9,4 +9,4 @@ const getUtulky = (state = false, action:any) => {
 
 }
 
-export default getUtulky
+export default getDataFirstPage
