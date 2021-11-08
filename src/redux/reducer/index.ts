@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 import getUtulky from "./getUtulky"
-import getDataFirstPage from "./getDataFirstPage"
+import getData from "./getData"
 
 const reducers = combineReducers ({
     utulky: getUtulky,
-    dataFirstPage : getDataFirstPage 
+    data : getData
 })
 
 export default reducers;

@@ -14,13 +14,13 @@ function App() {
 
 
   const showPage = () => {
-    if(showState.dataFirstPage !== false || Object.keys(showState.dataFirstPage).length > 0) {
+    if(showState.data !== false  && Object.keys(showState.data).length > 0) {
       return (
         <SecondPage/>
       )
     } else {
       return (
-        <SecondPage/>
+        <FirstPage/>
       )
     }
   }

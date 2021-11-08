@@ -1,4 +1,4 @@
-const getDataFirstPage = (state = false, action:any) => {
+const getData = (state = false, action:any) => {
     switch (action.type) {
         case "ADD_DATA":
             return action.data
@@ -9,4 +9,4 @@ const getDataFirstPage = (state = false, action:any) => {
 
 }
 
-export default getDataFirstPage
+export default getData

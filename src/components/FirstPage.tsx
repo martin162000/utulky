@@ -15,7 +15,7 @@ const FirstPage = () => {
         <div className="mainColumn">
             <PageSteps page={1}/>
             <h1>Vyberte si možnosť, ako chcete pomôcť</h1>
-            <form action="" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <SelectHelp handleChange={handleChange} err={errors}/>
                 <SelectUtulky handleChange={handleChange} err={errors} values={values} />
                 <SelectDonate handleChange={handleChange} err={errors} values={values}  />

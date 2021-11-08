@@ -50,7 +50,7 @@
       }
     }
   }
-  
+
 
   .continueBtn {
     padding: 20px 24px;
@@ -63,7 +63,6 @@
     color: #FFFFFF;
     border: none;
     cursor: pointer;
-    align-self: end;
     margin-top: 72px;
 
     &:hover,
@@ -72,6 +71,19 @@
     }
 }
 
+.btnGroup {
+    display: flex;
+}
+
+.btnSetRight {
+  margin-left: auto;
+}
+
+.back {
+  background: #F3E2D9;
+  color: #2F2F2F;
+  box-shadow: none;
+}
 
 
  

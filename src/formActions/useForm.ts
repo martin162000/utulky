@@ -10,7 +10,11 @@ const useForm = (validateForm:any) => {
         typeHelp: '',
         utulok: '',
         amount: '',
-        customAmount: ''
+        customAmount: '',
+        name: '',
+        lastname: '',
+        email: '',
+        mobile: ''
 
     })
 
@@ -59,12 +63,13 @@ const handleSubmit = (e:any) => {
 }
 
 useEffect(() => {
-
     if(Object.keys(errors).length === 0 && isSubmit === true) {
         dispatch({
             type: "ADD_DATA",
             data: values
         });
+        
+
         setIsSubmit(false)
     } 
 }, [isSubmit,errors,values,dispatch])
