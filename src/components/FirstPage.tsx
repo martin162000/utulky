@@ -29,7 +29,10 @@ const FirstPage = () => {
                 <SelectHelp handleChange={handleChange} err={errors}/>
                 <SelectUtulky handleChange={handleChange} err={errors} values={values} />
                 <SelectDonate handleChange={handleChange} err={errors} values={values}  />
-                <button className="continueBtn" type="submit"> Pokračovať </button>
+
+                <div className="btnGroup">
+                    <button className="continueBtn btnSetRight" type="submit"> Pokračovať </button>
+                </div>
             </form>
         </div>
     )

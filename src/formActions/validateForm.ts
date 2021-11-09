@@ -18,7 +18,7 @@ const validateForm = (values:any, whichPage:any) => {
         }
 
     } else if(whichPage === "second") {
-        let pattern = /[^+0-9\.]+$/;
+        let pattern = /[^+0-9]+$/;
         if(!values.email) {
             errors.email = '*Povinné';
         } else if (!/\S+@\S+\.\S+/.test(values.email)) {

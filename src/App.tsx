@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import './assets/scss/App.scss';
 import FirstPage from './components/FirstPage';
 import SecondPage from './components/SecondPage';
+import ThirdPage from './components/ThirdPage';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
@@ -33,7 +34,7 @@ function App() {
       <Header />
 
       <div className="main">
-          {showPage()}
+           <ThirdPage/>
       </div>
 
       <Footer/>

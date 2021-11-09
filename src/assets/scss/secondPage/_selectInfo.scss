@@ -6,7 +6,7 @@
         font-weight: 800;
         font-size: 14px;
         line-height: 19px;
-        color: #2F2F2F;
+        color: $primaryColor;
 
     }
 
@@ -14,6 +14,7 @@
             margin-top: 16px;
             width: 100%;
             position: relative;
+
         
             span {
                 position: absolute;
@@ -22,7 +23,7 @@
                 font-weight: 800;
                 font-size: 11px;
                 line-height: 19px;
-                color: #2F2F2F;
+                color: $primaryColor;
                 opacity: 0.8;
             }
         
@@ -32,7 +33,7 @@
             font-size: 16px;
             line-height: 19px;
             bottom: 15px;
-            color: #2F2F2F;
+            color: $primaryColor;
             }
 
             input {
@@ -40,7 +41,7 @@
                 font-weight: normal;
                 font-size: 16px;
                 line-height: 21px;
-                color: #2F2F2F;
+                color: $primaryColor;
 
                 &::placeholder {
 
@@ -81,4 +82,8 @@
       .inputPhone {
         padding-left: 55px;
       }
+}
+
+.inputInfoError {
+    margin-top: 25px !important;
 }

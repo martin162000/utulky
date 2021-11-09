@@ -2,6 +2,7 @@
 @import './firstPage/selectUtulky';
 @import './firstPage/selectDonate';
 @import './secondPage/selectInfo';
+@import './thirdPage/review';
 
 .main {
     background-size: 35%;
@@ -10,8 +11,8 @@
     background-repeat: no-repeat;
     margin: 100px auto;
     width: 1050px;
-    //height: 100vh;
-    min-height: 775px;
+    height: 805px;
+    //min-height: 775px;
   } 
   
   .mainColumn {
@@ -81,7 +82,7 @@
 
 .back {
   background: #F3E2D9;
-  color: #2F2F2F;
+  color: $primaryColor;
   box-shadow: none;
 }
 

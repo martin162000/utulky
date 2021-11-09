@@ -11,7 +11,7 @@ const InputNumber = (getAll:any) => {
 
 
     const handleMobile = (e:any) => {
-        let pattern = /[^+0-9\.]+$/;
+        let pattern = /[^+0-9]+$/;
         if(!pattern.test(e.target.value) && e.target.value.length < 14){
                 setStateNumber(e.target.value)
         }
@@ -52,7 +52,7 @@ const InputNumber = (getAll:any) => {
 
 
     return (
-    <div className="selectInputInfo" /*style={{marginTop:  '25px'}} */ style={ getAll.err.email ? { marginTop: '25px'} : {}}>
+    <div className={(getAll.err.mobile) ? "selectInputInfo inputInfoError" : "selectInputInfo "}>
         {getAll.err.mobile && <span className="spanError">{getAll.err.mobile}</span>}
         <label className="titileLabel">Telefónne číslo</label>
         <img src={handleFlag()} alt="countryFlag" />
