@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import skFlag from '../../assets/img/slovakia.png'
 import czFlag from '../../assets/img/czech.png'
+import { useSelector } from 'react-redux'
 
 
 const InputNumber = (getAll:any) => {
-
+    
+    const showState = useSelector((state:any) => state)
     const [stateNumber, setStateNumber] = useState(getAll.values.mobile)
+
 
     const handleMobile = (e:any) => {
         let pattern = /[^+0-9\.]+$/;
@@ -25,6 +28,7 @@ const InputNumber = (getAll:any) => {
 
     useEffect(() => {
 
+
         if(stateNumber.length < 5) {
             if(stateNumber.substr(0,1) !== "+") {
                 setStateNumber(stateNumber.replace(/[^+]{1}/g, ''))
@@ -39,7 +43,12 @@ const InputNumber = (getAll:any) => {
             }
     }
 
-    }, [stateNumber])
+            if(showState.data.mobile.length > 2) {
+             setStateNumber(getAll.values.mobile)
+
+        }
+
+    }, [stateNumber, showState, getAll])
 
 
     return (
@@ -47,7 +56,7 @@ const InputNumber = (getAll:any) => {
         {getAll.err.mobile && <span className="spanError">{getAll.err.mobile}</span>}
         <label className="titileLabel">Telefónne číslo</label>
         <img src={handleFlag()} alt="countryFlag" />
-        <input className="inputInfo inputPhone" type="tel" name="mobile" placeholder="+421 | +420"   onChange={e => { handleMobile(e); getAll.handleChange(e) }}  value={stateNumber}/>
+        <input className="inputInfo inputPhone" type="tel" name="mobile" placeholder="+421 | +420" maxLength={13}  onChange={e => { handleMobile(e); getAll.handleChange(e) }}  value={stateNumber}/>
     </div>
     )
 }

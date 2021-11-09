@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const useForm = (validateForm:any) => {
 
     const dispatch = useDispatch();
+    const getData = useSelector((state:any) => state)
 
 
     const [values, setValues] = useState({
@@ -56,23 +57,41 @@ const handleChange = (e:any) => {
         } 
     }
 
-const handleSubmit = (e:any) => {
+const handleSubmit = (e:any, page:any) => {
     e.preventDefault();
-    setErrors(validateForm(values));
+    setErrors(validateForm(values,page));
     setIsSubmit(true)
 }
 
+
+///////////////////// Post data to state only one time when load component 
 useEffect(() => {
+
+    if(getData.data !== false) {
+        setValues(getData.data);
+    }
+    
+}, [getData])
+/////////////////////
+
+useEffect(() => {
+
     if(Object.keys(errors).length === 0 && isSubmit === true) {
         dispatch({
             type: "ADD_DATA",
             data: values
         });
-        
 
-        setIsSubmit(false)
+        if(isSubmit && getData.currentPage === 1) {
+            dispatch({
+                type: "SET_CURRENTPAGE",
+                data: 2
+            });
+        }
+            setIsSubmit(false)
     } 
-}, [isSubmit,errors,values,dispatch])
+    
+}, [isSubmit,errors,values,dispatch, getData])
 
 
     return {handleChange, values, handleSubmit, errors}

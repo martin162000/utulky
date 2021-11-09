@@ -1,8 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 
 
 const SelectHelp = (getAll:any) => {
+  const showState = useSelector((state:any) => state)
 
 
 
@@ -10,7 +12,7 @@ const SelectHelp = (getAll:any) => {
         <div className="selectHelp">
           {getAll.err.typeHelp && <span className="spanError">{getAll.err.typeHelp}</span>}
         <label>
-          <input type="radio" name="typeHelp" value="utulok" onChange={getAll.handleChange}/>
+          <input type="radio" name="typeHelp" defaultChecked={showState.data.typeHelp === "utulok" ? true : false } value="utulok" onChange={getAll.handleChange}/>
           <div className="box leftBox">
             <div className="iconBox">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +31,7 @@ const SelectHelp = (getAll:any) => {
 
 
           <label>
-          <input type="radio" name="typeHelp" value="nadacia" onChange={getAll.handleChange}/>
+          <input type="radio" name="typeHelp"  defaultChecked={showState.data.typeHelp === "nadacia" ? true : false } value="nadacia" onChange={getAll.handleChange}/>
           <div className="box rightBox">
             <div className="iconBox">
               <svg className="packa" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -12,9 +12,12 @@ function App() {
 
   const showState = useSelector((state:any) => state)
 
-
   const showPage = () => {
-    if(showState.data !== false  && Object.keys(showState.data).length > 0) {
+    if(showState.currentPage === 1 || showState.data === false) {
+      return (
+        <FirstPage/>
+      )
+    } else if(showState.currentPage === 2) {
       return (
         <SecondPage/>
       )
