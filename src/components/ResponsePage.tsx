@@ -17,7 +17,7 @@ const ResponsePage = () => {
             email: showState.data.email,
             value: showState.data.amount + showState.data.customAmount,
             phone: showState.data.mobile,
-            shelterID: showState.utulky[index].id
+            shelterID: showState.utulok ? showState.utulky[index].id : 0
         }).then(response => {
                // console.log(response)
                setResponseState("ResponseTrue")
