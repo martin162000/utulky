@@ -24,8 +24,12 @@
 
 .reCheckbox {
     margin-top: 52px;
+    position: relative;
 
     label {
+        position: relative;
+        left: 11px;
+        bottom: 14px;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -34,12 +38,34 @@
         opacity: 0.8;
     }
 
+    svg {
+        position: absolute;
+        top: 13px;
+        left: 13px;
+        display: none;
+    }
+
     input {
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
         width: 34px;
         height: 34px;
         appearance: none;
-        border: 1px solid black;
-        border-radius: 4px;
+        border: 1px solid #e9c1ac;
+        border-radius: 8px;
+        transition: 0.2s all;
+
+        &:checked,
+        &:hover {
+            border: 1px solid #F3E2D9;
+        }
+
+        &:checked + svg {
+            display: block;
+          }
     }
 
+
 }
+

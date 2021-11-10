@@ -15,7 +15,8 @@ const useForm = (validateForm:any) => {
         name: '',
         lastname: '',
         email: '',
-        mobile: ''
+        mobile: '',
+        consent: ''
 
     })
 
@@ -55,6 +56,19 @@ const handleChange = (e:any) => {
                 "utulok":""
             }) 
         } 
+        else if (name === "consent") {
+                if(e.target.checked) {
+                setValues({
+                    ...values,
+                    [name]:value
+                }) 
+            } else {
+                setValues({
+                    ...values,
+                    [name]:""
+                }) 
+            }
+         } 
     }
 
 const handleSubmit = (e:any, page:any) => {
@@ -86,6 +100,11 @@ useEffect(() => {
             dispatch({
                 type: "SET_CURRENTPAGE",
                 data: 2
+            });
+        } else if(isSubmit && getData.currentPage === 2) {
+            dispatch({
+                type: "SET_CURRENTPAGE",
+                data: 3
             });
         }
             setIsSubmit(false)

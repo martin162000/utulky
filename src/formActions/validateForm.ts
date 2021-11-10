@@ -40,6 +40,10 @@ const validateForm = (values:any, whichPage:any) => {
             console.log(pattern.test(values.mobile))
             errors.mobile = 'Použivate nepovolené znaky';
         }
+    } else if(whichPage === "third") {
+        if(!values.consent) {
+            errors.consent = '*Povinné';
+        } 
     }
 
     return errors;
