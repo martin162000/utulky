@@ -19,7 +19,7 @@ const ThirdPage = () => {
         });
     }
 
-    if (true) {
+
         return (
             <div className="mainColumn">
             <PageSteps page={3}/>
@@ -41,32 +41,6 @@ const ThirdPage = () => {
             </form>
         </div>
         )
-    }
-
-    if(false) {
-        return (
-            <div className="mainColumn">
-                <h1>Ďakujeme, že ste podporili nadáciu.</h1>
-                <div className="review">
-                        <h3>Ak chcete znovu finančne pomôcť konkretnému útulku alebo nadácií, kliknite na "Znovu pomôcť"</h3>
-                        <button className="againBtn" type="submit"> Znovu pomôcť </button>
-                </div>
-            </div>
-        )
-    }
-
-
-   if(false) return (
-        <div className="mainColumn">
-            <h1>Ospravedlňujeme sa, nastala chyba.</h1>
-            <div className="review">
-                    <h3>Nastala chyba pri spracovaní údajov. Ak chcete znovu vyplniť formulár a pomôcť nadácií, kliknie na "Znovu vyplinť"</h3>
-                    <button className="againBtnErr" type="submit"> Znovu vyplinť </button>
-            </div>
-        </div>
-    )
+    
 }
-
 export default ThirdPage
-
-

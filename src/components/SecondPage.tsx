@@ -23,6 +23,7 @@ const SecondPage = () => {
     }
 
 
+
     return (
         <div className="mainColumn">
         <PageSteps page={2}/>

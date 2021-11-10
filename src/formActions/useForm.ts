@@ -57,17 +57,19 @@ const handleChange = (e:any) => {
             }) 
         } 
         else if (name === "consent") {
-                if(e.target.checked) {
-                setValues({
-                    ...values,
-                    [name]:value
+
+            if(e.target.checked) {
+                 setValues({
+                      ...values,
+                     [name]:value
                 }) 
             } else {
-                setValues({
-                    ...values,
-                    [name]:""
-                }) 
-            }
+                 setValues({
+                      ...values,
+                       [name]:""
+                 }) 
+                 
+                }
          } 
     }
 
@@ -105,6 +107,11 @@ useEffect(() => {
             dispatch({
                 type: "SET_CURRENTPAGE",
                 data: 3
+            });
+        } else if(isSubmit && getData.currentPage === 3) {
+            dispatch({
+                type: "SET_CURRENTPAGE",
+                data: 4
             });
         }
             setIsSubmit(false)

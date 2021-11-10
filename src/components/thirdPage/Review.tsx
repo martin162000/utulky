@@ -19,7 +19,7 @@ const Review = (getAll:any) => {
     const tel = () => {
         if(showState.data.mobile) {
             let numberBeautify = (showState.data.mobile.substr(0,4) +" "+ showState.data.mobile.substr(4,3) + " " + showState.data.mobile.substr(7,3) + " " + showState.data.mobile.substr(10,3))
-            return (<p> {numberBeautify}</p>)
+            return (<p> {numberBeautify} </p>)
         } else {
             return (<p> Musíte zadať svoje číslo pred odoslaním formuláru</p>)
         }
@@ -60,7 +60,7 @@ const Review = (getAll:any) => {
 
             <div className="reInfo">
                 <h2>Telefónne číslo</h2>
-                <p>{tel()}</p>
+                {tel()}
             </div>
         </div>
     )

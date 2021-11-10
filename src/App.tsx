@@ -6,6 +6,7 @@ import SecondPage from './components/SecondPage';
 import ThirdPage from './components/ThirdPage';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import ResponsePage from './components/ResponsePage';
 
 
 
@@ -22,9 +23,13 @@ function App() {
       return (
         <SecondPage/>
       )
-    } else {
+    } else if(showState.currentPage === 3) {
       return (
-        <FirstPage/>
+        <ThirdPage/>
+      )
+    } else if(showState.currentPage === 4) {
+      return (
+        <ResponsePage/>
       )
     }
   }
@@ -34,7 +39,7 @@ function App() {
       <Header />
 
       <div className="main">
-           <ThirdPage/>
+            {showPage()}
       </div>
 
       <Footer/>
