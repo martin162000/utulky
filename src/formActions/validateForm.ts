@@ -1,48 +1,50 @@
+import i18n  from '../i18n';
+
 
 const validateForm = (values:any, whichPage:any) => {
     let errors:any = {};
 
     if(whichPage === "first") {
         if(!values.typeHelp) {
-            errors.typeHelp = '*Povinné';
+            errors.typeHelp = i18n.t('showErrorHelp')
         }
 
         if((!values.utulok && !values.typeHelp) || (!values.utulok && values.typeHelp === "utulok")) {
-            errors.utulok = '*Povinné';
+            errors.utulok = i18n.t('showErrorShelter')
         }
 
         if(!values.amount && !values.customAmount ) {
-            errors.amount = '*Povinné';
+            errors.amount= i18n.t('showErrorAmount')
         } else if(parseFloat(values.customAmount) < 1) {
-            errors.amount = 'Minimálna suma je 1$';
+            errors.amount= i18n.t('showErrorAmountLess1')
         }
 
     } else if(whichPage === "second") {
         let pattern = /[^+0-9]+$/;
         if(!values.email) {
-            errors.email = '*Povinné';
+            errors.email= i18n.t('showErrorEmail')
         } else if (!/\S+@\S+\.\S+/.test(values.email)) {
-            errors.email = 'E-mail adresa je nesprávna';
+            errors.email= i18n.t('showErrorEmailBad')
         }
         
         if(!values.lastname.trim()) {
-            errors.lastname = '*Povinné';
+            errors.lastname = i18n.t('showErrorLastname')
         }
 
 
         if(values.mobile.length < 2) {
-            errors.mobile = '*Povinné';
+            errors.mobile = i18n.t('showErrorMobile')
         } else if((values.mobile.substr(0,4) !== "+421") && (values.mobile.substr(0,4) !== "+420")) {
-            errors.mobile = 'Akceptujeme len formát s predvoľbou +421 | +420';
+            errors.mobile = i18n.t('showErrorMobileBadFormat')
         } else if(values.mobile.length !== 13) {
-            errors.mobile = 'Číslo je príliš krátke';
+            errors.mobile = i18n.t('showErrorMobileShort')
         } else if(pattern.test(values.mobile)) {
             console.log(pattern.test(values.mobile))
-            errors.mobile = 'Použivate nepovolené znaky';
+            errors.mobile = i18n.t('showErrorMobilePattern')
         }
     } else if(whichPage === "third") {
         if(!values.consent) {
-            errors.consent = '*Povinné';
+            errors.consent = i18n.t('showErrorConsent')
         } 
     }
 

@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 
 
 const SelectUtulky = (getAll:any)  => {
 
-
+    const {t} = useTranslation();
     const dispatch = useDispatch();
     const showState = useSelector((state:any) => state)
 
@@ -32,10 +33,10 @@ const SelectUtulky = (getAll:any)  => {
     return (
         <div className="selectUtulok">
             {getAll.err.utulok && <span className="spanError zoomIn">{getAll.err.utulok}</span>}
-            <label>O projekte</label>
-            <label className="titileLabel">Útulok</label>
+            <label>{t('shelterOptionProject')}</label>
+            <label className="titileLabel">{t('shelterOptionTitle')}</label>
             <select name="utulok" className={(getAll.err.utulok) ? "optionsUtulky errorOutline" : "optionsUtulky "} value={getAll.values.utulok} onChange={getAll.handleChange} >
-                <option value="" disabled>Vyberte útulok zo zoznamu</option>
+                <option value="" disabled>{t('shelterChooseList')}</option>
                 {showState.utulky && showState.utulky.map((e:any) => (
                         <option key={e.id} value={e.name}>{e.name} </option>
                         ))}

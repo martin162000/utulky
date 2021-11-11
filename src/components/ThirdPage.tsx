@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import useForm from '../formActions/useForm'
 import { validateForm } from '../formActions/validateForm'
@@ -8,7 +9,7 @@ import Review from './thirdPage/Review'
 
 
 const ThirdPage = () => {
-
+    const {t} = useTranslation();
     const {handleChange, values, handleSubmit, errors} = useForm(validateForm)
     const dispatch = useDispatch();
 
@@ -17,7 +18,6 @@ const ThirdPage = () => {
         const elm = document.querySelector<HTMLElement>('.mainColumn')!;
         elm.classList.add("rightFadeOut");
         elm.classList.remove("leftFadeIn");
-
 
         setTimeout(() => {
             elm.style.display = 'none';
@@ -36,17 +36,15 @@ const ThirdPage = () => {
         return (
             <div className="mainColumn leftFadeIn">
             <PageSteps page={3}/>
-            <h1>Skontrolujte si zadané údaje</h1>
+            <h1>{t('thirdPageTitle')}</h1>
             <form onSubmit={e => handleSubmit(e, "third")}>
             <div className="review">
                     <Review values={values}/>
                     <Checkbox handleChange={handleChange} err={errors} values={values}/>
     
-    
-    
                 <div className="btnGroup">
-                    <button className="continueBtn back" type="button" onClick={handleBack}> Späť </button>
-                    <button className="continueBtn btnSetRight" type="submit"> Odoslať formulár </button>
+                    <button className="continueBtn back" type="button" onClick={handleBack}> {t('back')} </button>
+                    <button className="continueBtn btnSetRight" type="submit">{t('sendForm')} </button>
                 </div>
     
     

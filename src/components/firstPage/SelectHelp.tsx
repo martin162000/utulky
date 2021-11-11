@@ -1,9 +1,11 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
 
 
 const SelectHelp = (getAll:any) => {
+  const {t} = useTranslation();
   const showState = useSelector((state:any) => state)
   
   const handleChangeBorder = () => {
@@ -30,7 +32,7 @@ const SelectHelp = (getAll:any) => {
                   </g>
               </svg>
             </div>
-            <span className="biggerSpan">Chcem finančne prispieť konkrétnemu útulku</span>
+            <span className="biggerSpan">{t('shelterHelp')}</span>
           </div>
         </label>
 
@@ -49,7 +51,7 @@ const SelectHelp = (getAll:any) => {
               </svg>
 
             </div>
-            <span>Chcem finančne prispieť celej nadácii</span>
+            <span>{t('foundnationHelp')}</span>
           </div>
         </label>
       </div>

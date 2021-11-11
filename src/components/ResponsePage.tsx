@@ -1,9 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 
 
 const ResponsePage = () => {
+    const {t} = useTranslation();
     const showState = useSelector((state:any) => state)
     const dispatch = useDispatch();
     const index = showState.utulky.findIndex( (x:any) => x.name ===showState.data.utulok);
@@ -46,27 +48,27 @@ const ResponsePage = () => {
     if(responseState === "ResponseTrue") {
         return (
             <div className="mainColumn zoomOutIn">
-                <h1>Ďakujeme, že ste podporili nadáciu.</h1>
+                <h1>{t('responseSuccessfullyTitle')}</h1>
                 <div className="review">
-                        <h3>Ak chcete znovu finančne pomôcť konkrétnemu útulku alebo nadácií, kliknite na "Znovu pomôcť"</h3>
-                        <button className="againBtn" onClick={handleAgain}> Znovu pomôcť </button>
+                        <h3>{t('responseSuccessfullyText')}</h3>
+                        <button className="againBtn" onClick={handleAgain}> {t('responseSuccessfullyButton')} </button>
                 </div>
             </div>
         )
     } else if(responseState === "ResponseFalse") {
         return (
         <div className="mainColumn zoomOutIn">
-                <h1>Ospravedlňujeme sa, nastala chyba.</h1>
+                <h1>{t('responseFalseTitle')}</h1>
                 <div className="review">
-                        <h3>Nastala chyba pri spracovaní údajov. Ak chcete znovu vyplniť formulár a pomôcť nadácií, kliknie na "Znovu vyplinť"</h3>
-                        <button className="againBtnErr" onClick={handleAgain}> Znovu vyplniť </button>
+                        <h3>{t('responseFalseText')}</h3>
+                        <button className="againBtnErr" onClick={handleAgain}> {t('responseFalseButton')}</button>
                 </div>
             </div>
         )
     } else {
         return (
              <div>
-                ...LOADING
+                {t('responseLoading')}
             </div>
         )
     }

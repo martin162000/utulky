@@ -7,11 +7,13 @@ import InputLastName from './secondPage/InputLastName'
 import InputEmail from './secondPage/InputEmail'
 import InputNumber from './secondPage/InputNumber'
 import { useDispatch } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
 
 
 
 const SecondPage = () => {
+    const {t} = useTranslation();
     const {handleChange, values, handleSubmit, errors} = useForm(validateForm)
     const dispatch = useDispatch();
 
@@ -24,7 +26,6 @@ const SecondPage = () => {
             elm.style.display = 'none';
           }, 230);
       
-    
         setTimeout(() => {
             dispatch({
                 type: "SET_CURRENTPAGE",
@@ -39,18 +40,18 @@ const SecondPage = () => {
     return (
         <div className="mainColumn leftFadeIn">
         <PageSteps page={2}/>
-        <h1>Potrebujeme od Vás zopár informácií</h1>
+        <h1>{t('secondPageTitle')}</h1>
         <form onSubmit={e => handleSubmit(e, "second")}>
         <div className="selectInfo">
-            <label>O vás</label>
+            <label>{t('secondPageAbout')}</label>
 
             <InputName handleChange={handleChange} err={errors} values={values} />
             <InputLastName handleChange={handleChange} err={errors} values={values} />
             <InputEmail handleChange={handleChange} err={errors} values={values} />
             <InputNumber handleChange={handleChange} err={errors} values={values} />
             <div className="btnGroup">
-                <button className="continueBtn back" type="button" onClick={handleBack}> Späť </button>
-                <button className="continueBtn btnSetRight" type="submit"> Pokračovať </button>
+                <button className="continueBtn back" type="button" onClick={handleBack}> {t('back')} </button>
+                <button className="continueBtn btnSetRight" type="submit"> {t('continue')} </button>
             </div>
 
         </div>

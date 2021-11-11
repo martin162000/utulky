@@ -1,4 +1,5 @@
 import React from 'react';
+import './i18n';
 import { useSelector } from 'react-redux';
 import './assets/scss/App.scss';
 import FirstPage from './components/FirstPage';

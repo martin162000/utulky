@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import skFlag from '../../assets/img/slovakia.png'
 import czFlag from '../../assets/img/czech.png'
 import { useSelector } from 'react-redux'
+import { TFunction } from 'i18next'
+import { useTranslation } from 'react-i18next'
 
 
 const InputNumber = (getAll:any) => {
-    
+
+    const { t }: {t: TFunction} = useTranslation()
     const showState = useSelector((state:any) => state)
     const [stateNumber, setStateNumber] = useState(getAll.values.mobile)
 
@@ -54,9 +57,9 @@ const InputNumber = (getAll:any) => {
     return (
     <div className={(getAll.err.mobile) ? "selectInputInfo inputInfoError errorOutline" : "selectInputInfo "}>
         {getAll.err.mobile && <span className="spanError zoomIn">{getAll.err.mobile}</span>}
-        <label className="titileLabel">Telefónne číslo</label>
+        <label className="titileLabel">{t('inputMobile')}</label>
         <img src={handleFlag()} alt="countryFlag" />
-        <input className="inputInfo inputPhone" type="tel" name="mobile" placeholder="+421 | +420" maxLength={13}  onChange={e => { handleMobile(e); getAll.handleChange(e) }}  value={stateNumber}/>
+        <input className="inputInfo inputPhone" type="tel" name="mobile" placeholder={t('inputMobilePlaceholder')} maxLength={13}  onChange={e => { handleMobile(e); getAll.handleChange(e) }}  value={stateNumber}/>
     </div>
     )
 }

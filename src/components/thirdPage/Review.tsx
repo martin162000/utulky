@@ -1,18 +1,20 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux'
 
 
 
 const Review = (getAll:any) => {
+    const {t} = useTranslation();
     const showState = useSelector((state:any) => state)
 
     const help = () => {
         if(showState.data.typeHelp === "nadacia") {
-            return (<p>Chcem finančne prispieť celej nadácii</p> )
+            return (<p>{t('foundnationHelp')}</p> )
         } else if (showState.data.typeHelp === "utulok") {
-            return (<p>Chcem finančne prispieť konkrétnemu útulku</p> )
+            return (<p>{t('shelterHelp')}</p> )
         } else {
-            return (<p> Musíte vybrať formu pomoci (nadácia / útulok)</p>)
+            return (<p>{t('reviewNotShelter')}</p>)
         }
     }
 
@@ -21,7 +23,7 @@ const Review = (getAll:any) => {
             let numberBeautify = (showState.data.mobile.substr(0,4) +" "+ showState.data.mobile.substr(4,3) + " " + showState.data.mobile.substr(7,3) + " " + showState.data.mobile.substr(10,3))
             return (<p> {numberBeautify} </p>)
         } else {
-            return (<p> Musíte zadať svoje číslo pred odoslaním formuláru</p>)
+            return (<p>{t('reviewNotMobile')}</p>)
         }
     }
 
@@ -33,33 +35,33 @@ const Review = (getAll:any) => {
         <div>
             
             <div className="reInfo">
-                <h2>Akou formou chcem pomôcť</h2>
+                <h2>{t('infoHelp')}</h2>
                 {help()}
             </div>
 
             <div className="reInfo">
-                <h2>Najviac mi záleží na útulku</h2>
-                <p>{showState.data.utulok ? showState.data.utulok : "Prispievam peniaze pre celú nadáciu"}</p>
+                <h2>{t('infoShelter')}</h2>
+                <p>{showState.data.utulok ? showState.data.utulok : t('notShelterMessage')}</p>
             </div>
 
             <div className="reInfo">
-                <h2>Suma ktorou chcem pomôcť</h2>
-                <p>{(showState.data.amount || showState.data.customAmount)   ? (showState.data.amount + showState.data.customAmount) + " €" : "Musíte vyplniť sumu"}</p>
+                <h2>{t('infoAmount')}</h2>
+                <p>{(showState.data.amount || showState.data.customAmount)   ? (showState.data.amount + showState.data.customAmount) + " " + t('currency') : t('notAmount')}</p>
             </div>
 
             <div className="reInfo">
-                <h2>Meno a priezvisko</h2>
-                <p>{showState.data.name} {showState.data.lastname ? showState.data.lastname : "Musíte zadať priezvisko"}</p>
+                <h2>{t('infoNameLastname')}</h2>
+                <p>{showState.data.name} {showState.data.lastname ? showState.data.lastname : t('notLastname')}</p>
             </div>
 
 
             <div className="reInfo">
-                <h2>E-mailová adresa</h2>
-                <p>{showState.data.email ? showState.data.email : "Musíte zadať email"}</p>
+                <h2>{t('infoEmail')}</h2>
+                <p>{showState.data.email ? showState.data.email : t('notEmail')}</p>
             </div>
 
             <div className="reInfo">
-                <h2>Telefónne číslo</h2>
+                <h2>{t('infoMobile')}</h2>
                 {tel()}
             </div>
         </div>
