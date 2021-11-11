@@ -1,3 +1,5 @@
+Aplikáciu môžte odtestovať na : https://martin162000.github.io/utulky/
+
 # Zadanie Frontend developer GoodRequest
 
 Cieľom zadania je vytvoriť jednoduchú aplikáciu v Reacte, ktorá slúži ako formulár pre nadáciu GoodBoy na podporu slovenských útulkov pre psy. 
@@ -49,6 +51,9 @@ Vizuálna kvalita spracovania aplikácie a štýlovanie je tiež predmetom hodno
 **Ak by ste mali hocijaké otázky alebo ste sa niekde zasekli:**
 
 * Kedykoľvek napíšte otázky alebo nás požiadajte o pomoc na peter.reguli@goodrequest.com - radi vám poradíme ;)
+
+
+You can test app on : https://martin162000.github.io/utulky/
 
 # Assignement for Frontend developer - GoodRequest
 
