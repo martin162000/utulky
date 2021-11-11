@@ -3,12 +3,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
+  padding: 0;
   position: relative;
-  max-width: 557px;
+  max-width: rem(557);
 
   @media (max-width: 936px) {
-    margin: 25px auto;
+    margin: rem(25) auto;
     justify-content: center;
   }
 
@@ -17,7 +17,7 @@ input[type="radio"] {
     &:checked {
       + .box {
         background: linear-gradient(180deg, #CD8B65 0%, #BB6B3D 100%);
-        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+        box-shadow: 0 rem(100) rem(80) rgba(0, 0, 0, 0.07), 0 rem(41.7776) rem(33.4221) rgba(0, 0, 0, 0.0503198), 0 rem(22.3363) rem(17.869) rgba(0, 0, 0, 0.0417275), 0 rem(12.5216) rem(10.0172) rgba(0, 0, 0, 0.035), 0 rem(6.6501) rem(5.32008) rgba(0, 0, 0, 0.0282725), 0 rem(2.76726) rem(2.21381) rgba(0, 0, 0, 0.0196802);
         span {
           color: white;
         }
@@ -40,18 +40,18 @@ input[type="radio"] {
   .leftBox {
     background: #FAF9F9;
     box-sizing: border-box;
-    border-radius: 24px 0px 0px 24px;
+    border-radius: rem(24) 0 0 rem(24);
     border-right: none !important;
   }
 
   .rightBox {
-    border-radius: 0px 24px 24px 0px;
+    border-radius: 0 rem(24) rem(24) 0px;
   }
   
   .box {
-    border: 1px solid #dfdfdf;
-    width: 278px;
-    height: 186px;
+    border: rem(1) solid #dfdfdf;
+    width: rem(278);
+    height: rem(186);
     transition: all 250ms ease;
     display: inline-block;
     text-align: center;
@@ -59,40 +59,40 @@ input[type="radio"] {
     position: relative;
 
     @media (max-width: 620px) {
-      width: 240px;
+      width: rem(240);
     }
 
     @media (max-width: 570px) {
-      width: 220px;
+      width: rem(220);
     }
 
     @media (max-width: 527px) {
-      width: 200px;
+      width: rem(200);
     }
 
     @media (max-width: 500px) {
-      width: 190px;
+      width: rem(190);
     }
 
     @media (max-width: 480px) {
-      width: 180px;
+      width: rem(180);
     }
 
     @media (max-width: 460px) {
-      width: 170px;
+      width: rem(170);
     }
 
     @media (max-width: 440px) {
-      width: 150px;
+      width: rem(150);
     }
     
 
     .iconBox {
-      top: 24px;
-      left: 24px;
+      top: rem(24);
+      left: rem(24);
       position:relative;
-      width: 80px;
-      height: 80px;
+      width: rem(80);
+      height: rem(80);
       border-radius: 50%;
       background: $primaryColor;
       background-color: rgba(47,47,47,0.16);
@@ -117,26 +117,26 @@ input[type="radio"] {
       position: absolute;
      // font-weight: 600;
      font-weight: 400;
-      font-size: 16px;
-      line-height: 21px;
+      font-size: rem(16);
+      line-height: rem(21);
       color: #585757;
       text-align: left;
-      left: 24px;
-      bottom: 24px;
-      padding-right: 5px;
+      left: rem(24);
+      bottom: rem(24);
+      padding-right: rem(5);
 
       
     @media (max-width: 570px) {
-      font-size: 15px;
+      font-size: rem(15);
     }
 
     @media (max-width: 527px) {
-      font-size: 14px;
+      font-size: rem(14);
     }
 
     @media (max-width: 440px) {
-      font-size: 11px;
-      padding-right: 10px;
+      font-size: rem(11);
+      padding-right: rem(10);
     }
 
 
@@ -144,17 +144,17 @@ input[type="radio"] {
 
   .biggerSpan {
     @media (max-width: 414px) {
-      bottom: 10px;
+      bottom: rem(10);
       }
     }
     }
 
   .focusBox {
-    border: 1px solid #CD8B65;
+    border: rem(1) solid #CD8B65;
   }
 
   .spanError {
-    top:-32px;
+    top:rem(-32);
   }
 
 }

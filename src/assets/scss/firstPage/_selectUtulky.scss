@@ -1,15 +1,15 @@
 .selectUtulok {
-    margin-top: 90px;
-    max-width: 557px;
+    margin-top: rem(90);
+    max-width: rem(557);
     position: relative;
 
     span {
       position: absolute;
       right: 0;
-      top: -13px;
+      top: rem(-13);
       font-weight: 800;
-      font-size: 14px;
-      line-height: 19px;
+      font-size: rem(14);
+      line-height: rem(19);
       color: $primaryColor;
       opacity: 0.8;
     }
@@ -17,14 +17,14 @@
     label {
       position: relative;
       font-weight: 800;
-      font-size: 16px;
-      line-height: 19px;
-      bottom: 15px;
+      font-size: rem(16);
+      line-height: rem(19);
+      bottom: rem(15);
       color: $primaryColor;
     }
 
   .optionsUtulky {
-    padding: 20px 22.5px 0px;
+    padding: rem(20) rem(22.5) 0;
     cursor: pointer;
     background: #FFFFFF;
     appearance: none;
@@ -33,23 +33,23 @@
     background-position-x: 97%;
     background-repeat: no-repeat;
     background-position-y: center;
-    background-size: 20px;
-    border: 1px solid #DFDFDF;
+    background-size: rem(20);
+    border: rem(1) solid #DFDFDF;
     box-sizing: border-box;
-    border-radius: 8px;
-    height: 74px;
+    border-radius: rem(8);
+    height: rem(74);
     width: 100%;
 
     @media (max-width: 620px) {
-      width: 480px;
+      width: rem(480);
     }
 
     @media (max-width: 570px) {
-      width: 440px;
+      width: rem(440);
     }
 
     @media (max-width: 527px) {
-      width: 400px;
+      width: rem(400);
     }
 
     @media (max-width: 500px) {
@@ -58,25 +58,25 @@
   }
 
   .titileLabel {
-    line-height: 21px;
+    line-height: rem(21);
     position: absolute;
-    top: 34px;
-    left: 24px;
-    height: 0px;
+    top: rem(34);
+    left: rem(24);
+    height: 0;
   }
 
   select option:disabled {
     color: #9F9F9F;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 21px;
+    font-size: rem(16);
+    line-height: rem(21);
   }
 
   select {
     color: #9F9F9F;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 21px;
+    font-size: rem(16);
+    line-height: rem(21);
 
   }
 

@@ -1,6 +1,10 @@
 $headerMainText: #9F9F9F;
 $primaryColor: #2F2F2F;
 
+@function rem($size, $context: 16) {
+    @return ($size / $context) * 1rem;
+  }
+
 @import './header';
 @import './main';
 @import './animations';
@@ -9,8 +13,8 @@ h1 {
     font-family: 'Hind', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 46px;
-    line-height: 52px;
+    font-size: rem(46);
+    line-height: rem(52);
     letter-spacing: 0.01em;
     color: #000000;
 
@@ -23,10 +27,10 @@ h1 {
 h2 {
     font-style: normal;
     font-weight: 800;
-    font-size: 16px;
+    font-size: rem(16);
     //line-height: 130%;
     color: $primaryColor;
-    margin: 10px 0px 24px;
+    margin: rem(10) rem(0) rem(24);
 }
 
 a {
@@ -37,7 +41,7 @@ a {
 form {
     width: 100%;
     @media (max-width: 936px) {
-        max-width: 557px;
+        max-width: rem(557);
         margin: 0 auto;
       }
 }
@@ -48,8 +52,8 @@ form {
     position: absolute;
     right: 0;
     font-weight: 800;
-    font-size: 14px;
-    line-height: 19px;
+    font-size: rem(14);
+    line-height: rem(19);
     color: $primaryColor;
     opacity: 0.8;
 }
@@ -57,10 +61,10 @@ form {
 .errorCheckbox {
     position: absolute;
     left: 0;
-    top: -20px;
+    top: rem(-20);
     font-weight: 800;
-    font-size: 12px;
-    line-height: 19px;
+    font-size: rem(12);
+    line-height: rem(19);
     color: #2F2F2F;
     opacity: 0.8;
 }
@@ -69,42 +73,42 @@ form {
 
 footer {
     margin: 0 auto;
-    max-width: 1140px;
-    height: 380px;
+    max-width: rem(1140);
+    height: rem(380);
     border-top: 1px solid rgba(47, 47, 47, 0.16);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 120px;
-    padding: 110px 0px 0px;
+    gap: rem(120);
+    padding: rem(110) rem(0) rem(0);
 
     @media (max-width: 1155px) {
-        max-width: 900px;
+        max-width: rem(900);
         grid-template-columns: 1fr 1fr;
-        padding: 90px 0px 0px;
-        gap: 30px;
+        padding: rem(90) rem(0) rem(0);
+        gap: rem(30);
       }
 
       @media (max-width: 920px) {
-        max-width: 740px;
+        max-width: rem(740);
         grid-template-columns: 1fr 1fr;
-        padding: 90px 0px 0px;
-        gap: 30px;
+        padding: rem(90) rem(0) rem(0);
+        gap: rem(30);
       }
 
       @media (max-width: 760px) {
-        max-width: 570px;
-        margin: 0px 30px;
+        max-width: rem(570);
+        margin: rem(0) rem(30);
         grid-template-columns: 1fr;
-        padding: 90px 0px 0px;
-        gap: 50px;
+        padding: rem(90) rem(0) rem(0);
+        gap: rem(50);
       }
 
     img {
-        width: 220px;
+        width: rem(220);
     }
 
     p {
-        line-height: 23px;
+        line-height: rem(23);
         margin: 0;
         padding: 0;
         color: #585757;
@@ -117,20 +121,20 @@ footer {
     }
     
     li {
-        margin: 15px 0;
+        margin: rem(15) 0;
     }
 
     div {
         justify-self: center;
-        max-width: 160px;
+        max-width: rem(160);
     }
 }
 
 select:focus, input:focus{
-    outline: 1px solid #CD8B65;
+    outline: rem(1) solid #CD8B65;
 }
 
 .errorOutline {
-        outline: 1px solid #CD8B65;
-        border-radius: 8px;
+        outline: rem(1) solid #CD8B65;
+        border-radius: rem(8);
 }

@@ -1,24 +1,24 @@
 .header {
     background: #FEFEFE;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08);
-    height: 40px;
+    height: rem(40);
     width: 100%;
     //padding-left: 184px;
     //padding-right: 154px;
-    padding: 0px 20%;
+    padding: 0 20%;
 
     ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
-        padding-top: 11.5px;
+        padding-top: rem(11.5);
     }
 
     li {
         float: right;
-        width: 24px;
-        height: 24px;
+        width: rem(24);
+        height: rem(24);
         text-align: center;
 
         img {
@@ -27,11 +27,11 @@
         }
 
         .igIcon {
-            width: 16.5px;
+            width: rem(16.5);
         }
 
         .fbIcon {
-            width: 7px;
+            width: rem(7);
         }
 
     }
@@ -40,7 +40,7 @@
 
         color: $headerMainText;
         font-weight: 600;
-        font-size: 14px;
+        font-size: rem(14);
         width: inherit;
         float:left;
     }

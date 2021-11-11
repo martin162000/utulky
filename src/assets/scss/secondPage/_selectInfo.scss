@@ -1,17 +1,17 @@
 .selectInfo {
 
-    margin-top: 15px;
+    margin-top: rem(15);
 
     label:first-child {
         font-weight: 800;
-        font-size: 14px;
-        line-height: 19px;
+        font-size: rem(14);
+        line-height: rem(19);
         color: $primaryColor;
 
     }
 
     .selectInputInfo {
-            margin-top: 16px;
+            margin-top: rem(16);
             width: 100%;
             position: relative;
             transition: all 0.25s;
@@ -20,10 +20,10 @@
             span {
                 position: absolute;
                 right: 0;
-                top: -19px;
+                top: rem(-19);
                 font-weight: 800;
-                font-size: 11px;
-                line-height: 19px;
+                font-size: rem(11);
+                line-height: rem(19);
                 color: $primaryColor;
                 opacity: 0.8;
             }
@@ -31,17 +31,17 @@
             label {
             position: relative;
             font-weight: 800;
-            font-size: 16px;
-            line-height: 19px;
-            bottom: 15px;
+            font-size: rem(16);
+            line-height: rem(19);
+            bottom: rem(15);
             color: $primaryColor;
             }
 
             input {
                 width: 100%;
                 font-weight: normal;
-                font-size: 16px;
-                line-height: 21px;
+                font-size: rem(16);
+                line-height: rem(21);
                 color: $primaryColor;
 
                 &::placeholder {
@@ -52,39 +52,39 @@
             }
 
             .titileLabel {
-                line-height: 21px;
+                line-height: rem(21);
                 position: absolute;
-                top: 16px;
-                left: 24px;
+                top: rem(16);
+                left: rem(24);
                 height: 0px;
               }
 
 
         img {
-                width: 23px;
+                width: rem(23);
                 position: absolute;
-                top: 40px;
-                left: 25px;
+                top: rem(40);
+                left: rem(25);
         }
         
     }
 
     .inputInfo {
-        padding: 24px 24px 0px;
+        padding: rem(24) rem(24) 0;
         background: #FFFFFF;
         appearance: none;
-        border: 1px solid #DFDFDF;
+        border: rem(1) solid #DFDFDF;
         box-sizing: border-box;
-        border-radius: 8px;
-        height: 74px;
+        border-radius: rem(8);
+        height: rem(74);
         width: 100%;
       }
 
       .inputPhone {
-        padding-left: 55px;
+        padding-left: rem(55);
       }
 }
 
 .inputInfoError {
-    margin-top: 25px !important;
+    margin-top: rem(25) !important;
 }
