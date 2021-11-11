@@ -30,7 +30,7 @@ const SelectHelp = (getAll:any) => {
                   </g>
               </svg>
             </div>
-            <span>Chcem finančne prispieť konkrétnemu útulku</span>
+            <span className="biggerSpan">Chcem finančne prispieť konkrétnemu útulku</span>
           </div>
         </label>
 

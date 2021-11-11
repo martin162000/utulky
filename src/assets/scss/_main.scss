@@ -10,18 +10,42 @@
     background-image: url("../img/bgDog.png");
     background-repeat: no-repeat;
     margin: 100px auto;
-    width: 1050px;
+    max-width: 1050px;
     height: 805px;
+
     //min-height: 775px;
+
+    @media (max-width: 1125px) {
+      padding: 0px 30px;
+      background-size: 30%;
+      background-position: 655px 125px;
+    }
+
+    @media (max-width: 936px) {
+      background-image: none;
+      margin: 80px auto 180px;
+    }
+
+    @media (max-width: 760px) {
+      background-image: none;
+      margin: 80px auto 200px;
+    }
   } 
   
   .mainColumn {
-    width: 557px;
+    max-width: 557px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
+
+    @media (max-width: 936px) {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+
   
     .pageSteps {
   
@@ -29,6 +53,12 @@
       flex-direction: row;
       align-items: center;
       padding: 0px;
+
+      @media (max-width: 936px) {
+        padding: 0px;
+        margin: 0 auto 25px;
+      }
+
   
       .step {
   

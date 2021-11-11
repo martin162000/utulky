@@ -1,6 +1,6 @@
 .selectUtulok {
     margin-top: 90px;
-    width: 100%;
+    max-width: 557px;
     position: relative;
 
     span {
@@ -39,6 +39,22 @@
     border-radius: 8px;
     height: 74px;
     width: 100%;
+
+    @media (max-width: 620px) {
+      width: 480px;
+    }
+
+    @media (max-width: 570px) {
+      width: 440px;
+    }
+
+    @media (max-width: 527px) {
+      width: 400px;
+    }
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
   }
 
   .titileLabel {

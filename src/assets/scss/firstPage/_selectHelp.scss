@@ -5,6 +5,12 @@
   align-items: center;
   padding: 0px;
   position: relative;
+  max-width: 557px;
+
+  @media (max-width: 936px) {
+    margin: 25px auto;
+    justify-content: center;
+  }
 
 input[type="radio"] {
     display: none;
@@ -52,6 +58,35 @@ input[type="radio"] {
     cursor: pointer;
     position: relative;
 
+    @media (max-width: 620px) {
+      width: 240px;
+    }
+
+    @media (max-width: 570px) {
+      width: 220px;
+    }
+
+    @media (max-width: 527px) {
+      width: 200px;
+    }
+
+    @media (max-width: 500px) {
+      width: 190px;
+    }
+
+    @media (max-width: 480px) {
+      width: 180px;
+    }
+
+    @media (max-width: 460px) {
+      width: 170px;
+    }
+
+    @media (max-width: 440px) {
+      width: 150px;
+    }
+    
+
     .iconBox {
       top: 24px;
       left: 24px;
@@ -88,8 +123,31 @@ input[type="radio"] {
       text-align: left;
       left: 24px;
       bottom: 24px;
+      padding-right: 5px;
+
+      
+    @media (max-width: 570px) {
+      font-size: 15px;
     }
+
+    @media (max-width: 527px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 440px) {
+      font-size: 11px;
+      padding-right: 10px;
+    }
+
+
   }
+
+  .biggerSpan {
+    @media (max-width: 414px) {
+      bottom: 10px;
+      }
+    }
+    }
 
   .focusBox {
     border: 1px solid #CD8B65;

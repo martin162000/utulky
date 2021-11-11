@@ -53,9 +53,9 @@ const ResponsePage = () => {
                 </div>
             </div>
         )
-    } else if(responseState === "ResponseFalse zoomOutIn") {
+    } else if(responseState === "ResponseFalse") {
         return (
-        <div className="mainColumn">
+        <div className="mainColumn zoomOutIn">
                 <h1>Ospravedlňujeme sa, nastala chyba.</h1>
                 <div className="review">
                         <h3>Nastala chyba pri spracovaní údajov. Ak chcete znovu vyplniť formulár a pomôcť nadácií, kliknie na "Znovu vyplinť"</h3>
