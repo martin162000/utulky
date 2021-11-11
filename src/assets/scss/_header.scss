@@ -6,6 +6,13 @@
     //padding-left: 184px;
     //padding-right: 154px;
     padding: 0 20%;
+    @media (max-width: 1550px) {
+        padding: 0 10%;
+      }
+
+    @media (max-width: 923px) {
+        padding: 0 8%;
+      }
 
     ul {
         list-style-type: none;

@@ -17,7 +17,3 @@ body {
   background: #FFFFFF;
 }
 
-
-@function rem($size, $context: 16) {
-  @return ($size / $context) * 1rem;
-}
