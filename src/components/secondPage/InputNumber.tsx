@@ -52,8 +52,8 @@ const InputNumber = (getAll:any) => {
 
 
     return (
-    <div className={(getAll.err.mobile) ? "selectInputInfo inputInfoError" : "selectInputInfo "}>
-        {getAll.err.mobile && <span className="spanError">{getAll.err.mobile}</span>}
+    <div className={(getAll.err.mobile) ? "selectInputInfo inputInfoError errorOutline" : "selectInputInfo "}>
+        {getAll.err.mobile && <span className="spanError zoomIn">{getAll.err.mobile}</span>}
         <label className="titileLabel">Telefónne číslo</label>
         <img src={handleFlag()} alt="countryFlag" />
         <input className="inputInfo inputPhone" type="tel" name="mobile" placeholder="+421 | +420" maxLength={13}  onChange={e => { handleMobile(e); getAll.handleChange(e) }}  value={stateNumber}/>

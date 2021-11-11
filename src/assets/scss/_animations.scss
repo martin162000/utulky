@@ -1,0 +1,135 @@
+
+  
+  .topFadeIn {
+    opacity: 1;
+    animation: topFade 0.35s linear;
+  }
+
+  @keyframes topFade {
+    0% {
+      opacity: 0.0;
+      transform: translateY(-3%);
+    }
+    100% {
+      opacity: 1.0;
+      transform: translateY(0%);
+  
+    }
+  }  
+
+
+  .leftFadeIn {
+    opacity: 1;
+    animation: leftFade 0.25s linear;
+  }
+
+  @keyframes leftFade {
+    0% {
+      opacity: 0.5;
+      transform: translateX(5%);
+    }
+    100% {
+      opacity: 1.0;
+      transform: translateX(0%);
+  
+    }
+  }  
+
+
+  .rightFadeOut {
+    animation: rightFade 0.25s linear;
+  }
+
+  @keyframes rightFade {
+    0% {
+      opacity: 1.0;
+      transform: translateX(0%);
+    }
+    100% {
+      opacity: 0.0;
+      transform: translateX(-5%);
+  
+    }
+  }  
+
+
+  .zoomOutIn {
+    animation: zoomoutin 0.40s linear;
+    opacity: 1.0;
+  }
+
+  @keyframes zoomoutin {
+    0% {
+      opacity: 0.0;
+      transform: scale(1.04)
+    }
+    100% {
+      opacity: 1.0;
+      transform: scale(1.00)
+  
+    }
+  }  
+
+
+
+.zoomIn {
+    animation: zoomin 0.25s linear;
+    opacity: 1.0;
+}
+
+@keyframes zoomin {
+    0% {
+      opacity: 0.0;
+      transform: scale(0.90)
+    }
+    100% {
+      opacity: 1.0;
+      transform: scale(1.00)
+  
+    }
+  }  
+
+
+
+
+  .pulse {
+    transform: scale(1.0);
+    animation: pulseineff 0.35s linear;
+  }
+
+  @keyframes pulseineff {
+    0% {
+      transform: scale(1.0);
+    }
+
+    30% {
+      transform: scale(1.10);
+    }
+
+    80% {
+      transform: scale(1.10);
+  
+    }
+
+    100% {
+      transform: scale(1.0);
+    }
+  }  
+
+
+
+
+
+
+  
+
+  @keyframes in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+  
+    }
+  }  
+  

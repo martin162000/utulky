@@ -24,7 +24,7 @@ const ResponsePage = () => {
             })
             .catch(error => {
                // console.error('ERROR', error);
-               setResponseState("ResponseFlase")
+               setResponseState("ResponseFalse")
             }); 
     }, [showState,index])
 
@@ -45,21 +45,21 @@ const ResponsePage = () => {
 
     if(responseState === "ResponseTrue") {
         return (
-            <div className="mainColumn">
+            <div className="mainColumn zoomOutIn">
                 <h1>Ďakujeme, že ste podporili nadáciu.</h1>
                 <div className="review">
-                        <h3>Ak chcete znovu finančne pomôcť konkretnému útulku alebo nadácií, kliknite na "Znovu pomôcť"</h3>
+                        <h3>Ak chcete znovu finančne pomôcť konkrétnemu útulku alebo nadácií, kliknite na "Znovu pomôcť"</h3>
                         <button className="againBtn" onClick={handleAgain}> Znovu pomôcť </button>
                 </div>
             </div>
         )
-    } else if(responseState === "ResponseFlase") {
+    } else if(responseState === "ResponseFalse zoomOutIn") {
         return (
         <div className="mainColumn">
                 <h1>Ospravedlňujeme sa, nastala chyba.</h1>
                 <div className="review">
                         <h3>Nastala chyba pri spracovaní údajov. Ak chcete znovu vyplniť formulár a pomôcť nadácií, kliknie na "Znovu vyplinť"</h3>
-                        <button className="againBtnErr" onClick={handleAgain}> Znovu vyplinť </button>
+                        <button className="againBtnErr" onClick={handleAgain}> Znovu vyplniť </button>
                 </div>
             </div>
         )

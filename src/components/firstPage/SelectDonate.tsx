@@ -22,7 +22,7 @@ const SelectDonate = (getAll:any) => {
 
     return (
         <div className="donate">
-        {getAll.err.amount && <span className="spanError">{getAll.err.amount}</span>}
+        {getAll.err.amount && <span className="spanError zoomIn">{getAll.err.amount}</span>}
         <span className="info">Suma, ktorou chcem prispieť</span>
           <div className="donateGroup">
             <label className="radioControl">

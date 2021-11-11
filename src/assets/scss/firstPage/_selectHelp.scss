@@ -43,9 +43,7 @@ input[type="radio"] {
   }
   
   .box {
-    border: 1px solid #CD8B65;
-
-
+    border: 1px solid #dfdfdf;
     width: 278px;
     height: 186px;
     transition: all 250ms ease;
@@ -91,6 +89,10 @@ input[type="radio"] {
       left: 24px;
       bottom: 24px;
     }
+  }
+
+  .focusBox {
+    border: 1px solid #CD8B65;
   }
 
   .spanError {

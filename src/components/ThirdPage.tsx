@@ -13,15 +13,28 @@ const ThirdPage = () => {
     const dispatch = useDispatch();
 
     const handleBack = () => {
-        dispatch({
-            type: "SET_CURRENTPAGE",
-            data: 2
-        });
+
+        const elm = document.querySelector<HTMLElement>('.mainColumn')!;
+        elm.classList.add("rightFadeOut");
+        elm.classList.remove("leftFadeIn");
+
+
+        setTimeout(() => {
+            elm.style.display = 'none';
+          }, 230);
+      
+
+        setTimeout(() => {
+            dispatch({
+                type: "SET_CURRENTPAGE",
+                data: 2
+            });
+        }, 250);
     }
 
 
         return (
-            <div className="mainColumn">
+            <div className="mainColumn leftFadeIn">
             <PageSteps page={3}/>
             <h1>Skontrolujte si zadané údaje</h1>
             <form onSubmit={e => handleSubmit(e, "third")}>
@@ -32,7 +45,7 @@ const ThirdPage = () => {
     
     
                 <div className="btnGroup">
-                    <button className="continueBtn back" onClick={handleBack}> Späť </button>
+                    <button className="continueBtn back" type="button" onClick={handleBack}> Späť </button>
                     <button className="continueBtn btnSetRight" type="submit"> Odoslať formulár </button>
                 </div>
     

@@ -5,15 +5,21 @@ import { useSelector } from 'react-redux'
 
 const SelectHelp = (getAll:any) => {
   const showState = useSelector((state:any) => state)
+  
+  const handleChangeBorder = () => {
 
+    document.querySelectorAll(".box").forEach((el) => {
+      el.classList.add('focusBox');
+    });
 
+  }
 
     return (
         <div className="selectHelp">
-          {getAll.err.typeHelp && <span className="spanError">{getAll.err.typeHelp}</span>}
+          {getAll.err.typeHelp && <span className="spanError zoomIn">{getAll.err.typeHelp}</span>}
         <label>
-          <input type="radio" name="typeHelp" defaultChecked={showState.data.typeHelp === "utulok" ? true : false } value="utulok" onChange={getAll.handleChange}/>
-          <div className="box leftBox">
+          <input type="radio" name="typeHelp" defaultChecked={showState.data.typeHelp === "utulok" ? true : false } value="utulok" onChange={e => { handleChangeBorder(); getAll.handleChange(e) }}/>
+          <div className={(getAll.err.typeHelp) ? "box leftBox focusBox" : (showState.data.typeHelp ? "box leftBox focusBox" : "box leftBox ")}>
             <div className="iconBox">
               <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_1586:116)">
@@ -31,8 +37,8 @@ const SelectHelp = (getAll:any) => {
 
 
           <label>
-          <input type="radio" name="typeHelp"  defaultChecked={showState.data.typeHelp === "nadacia" ? true : false } value="nadacia" onChange={getAll.handleChange}/>
-          <div className="box rightBox">
+          <input type="radio" name="typeHelp"  defaultChecked={showState.data.typeHelp === "nadacia" ? true : false } value="nadacia" onChange={e => { handleChangeBorder(); getAll.handleChange(e) }}/>
+          <div className={(getAll.err.typeHelp) ? "box rightBox focusBox" :  (showState.data.typeHelp ? "box rightBox focusBox" : "box rightBox ")}>
             <div className="iconBox">
               <svg className="packa" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M25.142 19.3238C22.8544 16.5619 19.963 15.0408 17.0001 15.0408C14.0371 15.0408 11.1456 16.5619 8.85818 19.3238C6.80198 21.8064 5.57452 24.9352 5.57452 27.6934C5.57452 29.0332 5.98412 30.0537 6.79188 30.7267C7.58916 31.3911 8.64176 31.6158 9.81609 31.6157C11.0657 31.6157 12.4531 31.3612 13.8164 31.1112C15.0077 30.8926 16.1329 30.6862 17.0001 30.6862C17.7486 30.6862 18.804 30.8821 19.9212 31.0895C22.5321 31.5743 25.4914 32.1236 27.2009 30.7022C28.0136 30.0265 28.4256 29.0142 28.4256 27.6934C28.4257 24.9352 27.1982 21.8064 25.142 19.3238ZM25.9272 29.1704C24.9363 29.9944 22.3571 29.5155 20.2847 29.1309C19.0747 28.9062 17.9319 28.694 17 28.694C15.9515 28.694 14.7398 28.9164 13.4568 29.1517C11.4692 29.5163 8.99557 29.9701 8.06695 29.1963C7.94317 29.0931 7.56651 28.7793 7.56651 27.6933C7.56651 25.4191 8.64933 22.699 10.3923 20.5945C12.2945 18.2978 14.6412 17.0329 16.9999 17.0329C19.3587 17.0329 21.7053 18.2978 23.6075 20.5945C25.3506 22.699 26.4333 25.4191 26.4333 27.6933C26.4335 28.7495 26.0525 29.0663 25.9272 29.1704Z" />

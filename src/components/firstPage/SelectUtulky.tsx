@@ -31,10 +31,10 @@ const SelectUtulky = (getAll:any)  => {
 
     return (
         <div className="selectUtulok">
-            {getAll.err.utulok && <span className="spanError">{getAll.err.utulok}</span>}
+            {getAll.err.utulok && <span className="spanError zoomIn">{getAll.err.utulok}</span>}
             <label>O projekte</label>
             <label className="titileLabel">Útulok</label>
-            <select name="utulok" className="optionsUtulky" value={getAll.values.utulok} onChange={getAll.handleChange} >
+            <select name="utulok" className={(getAll.err.utulok) ? "optionsUtulky errorOutline" : "optionsUtulky "} value={getAll.values.utulok} onChange={getAll.handleChange} >
                 <option value="" disabled>Vyberte útulok zo zoznamu</option>
                 {showState.utulky && showState.utulky.map((e:any) => (
                         <option key={e.id} value={e.name}>{e.name} </option>

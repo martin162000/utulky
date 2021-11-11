@@ -16,16 +16,28 @@ const SecondPage = () => {
     const dispatch = useDispatch();
 
     const handleBack = () => {
-        dispatch({
-            type: "SET_CURRENTPAGE",
-            data: 1
-        });
+        const elm = document.querySelector<HTMLElement>('.mainColumn')!;
+        elm.classList.add("rightFadeOut");
+        elm.classList.remove("leftFadeIn");
+
+        setTimeout(() => {
+            elm.style.display = 'none';
+          }, 230);
+      
+    
+        setTimeout(() => {
+            dispatch({
+                type: "SET_CURRENTPAGE",
+                data: 1
+            });
+        }, 250);
+    
     }
 
 
 
     return (
-        <div className="mainColumn">
+        <div className="mainColumn leftFadeIn">
         <PageSteps page={2}/>
         <h1>Potrebujeme od Vás zopár informácií</h1>
         <form onSubmit={e => handleSubmit(e, "second")}>
@@ -37,7 +49,7 @@ const SecondPage = () => {
             <InputEmail handleChange={handleChange} err={errors} values={values} />
             <InputNumber handleChange={handleChange} err={errors} values={values} />
             <div className="btnGroup">
-                <button className="continueBtn back" onClick={handleBack}> Späť </button>
+                <button className="continueBtn back" type="button" onClick={handleBack}> Späť </button>
                 <button className="continueBtn btnSetRight" type="submit"> Pokračovať </button>
             </div>
 

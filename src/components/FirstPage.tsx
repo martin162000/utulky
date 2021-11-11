@@ -22,7 +22,7 @@ const FirstPage = () => {
 
     return (
 
-        <div className="mainColumn">
+        <div className="mainColumn topFadeIn">
             <PageSteps page={1}/>
             <h1>Vyberte si možnosť, ako chcete pomôcť</h1>
             <form onSubmit={e => handleSubmit(e, "first")}>

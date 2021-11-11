@@ -3,6 +3,7 @@ $primaryColor: #2F2F2F;
 
 @import './header';
 @import './main';
+@import './animations';
 
 h1 {
     font-family: 'Hind', sans-serif;
@@ -89,4 +90,13 @@ footer {
         margin: 15px 0;
     }
     
+}
+
+select:focus, input:focus{
+    outline: 1px solid #CD8B65;
+}
+
+.errorOutline {
+        outline: 1px solid #CD8B65;
+        border-radius: 8px;
 }
