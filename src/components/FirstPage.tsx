@@ -7,6 +7,7 @@ import useForm from '../formActions/useForm'
 import { validateForm } from '../formActions/validateForm'
 import { useDispatch } from 'react-redux'
 import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet';
 
 
 
@@ -23,7 +24,16 @@ const FirstPage = () => {
         }, [dispatch])
 
     return (
-
+        <>
+        <Helmet>‍
+            <title>{t('seoFirstPageTitle')}</title>‍
+            <meta name="description" content={t('seoFirstPageDesc')} />
+            <meta property="og:title" content={t('firstPageTitle')} />
+            <meta property="og:site_name" content={t('seoFirstPageTitle')}/>
+            <meta property="og:locale" content={t('seoLocale')} />
+            <meta property="og:type" content={t('seoType')}  />
+      </Helmet>
+      
         <div className="mainColumn topFadeIn">
             <PageSteps page={1}/>
             <h1>{t('firstPageTitle')}</h1>
@@ -37,7 +47,8 @@ const FirstPage = () => {
                 </div>
             </form>
         </div>
-    )
+        </>
+        )
 }
 
 export default FirstPage

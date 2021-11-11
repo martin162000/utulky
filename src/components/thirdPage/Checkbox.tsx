@@ -1,10 +1,12 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux'
 
 
 
 
 const Checkbox = (getAll:any) => {
+    const {t} = useTranslation();
     const showState = useSelector((state:any) => state)
 
     return (
@@ -15,7 +17,7 @@ const Checkbox = (getAll:any) => {
             <path d="M17 1L6 12L1 7" stroke="#AB7455" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
 
-        <label>Súhlasím so spracovaním mojich osobných údajov</label>
+            <label>{t('checkboxConsent')}</label>
     </div>
     )
 }

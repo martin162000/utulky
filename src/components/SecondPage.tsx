@@ -8,6 +8,7 @@ import InputEmail from './secondPage/InputEmail'
 import InputNumber from './secondPage/InputNumber'
 import { useDispatch } from 'react-redux'
 import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet'
 
 
 
@@ -38,6 +39,16 @@ const SecondPage = () => {
 
 
     return (
+        <>
+        <Helmet>‍
+            <title>{t('seoSecondPageTitle')}</title>‍
+            <meta name="description" content={t('seoSecondPageDesc')} />
+            <meta property="og:title" content={t('secondPageTitle')} />
+            <meta property="og:site_name" content={t('seoSecondPageTitle')}/>
+            <meta property="og:locale" content={t('seoLocale')} />
+            <meta property="og:type" content={t('seoType')}  />
+        </Helmet>
+        
         <div className="mainColumn leftFadeIn">
         <PageSteps page={2}/>
         <h1>{t('secondPageTitle')}</h1>
@@ -57,7 +68,7 @@ const SecondPage = () => {
         </div>
         </form>
     </div>
-
+        </>
     )
 }
 

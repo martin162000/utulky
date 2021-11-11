@@ -1,11 +1,7 @@
-<<<<<<< HEAD
+........................................................................................
 Aplikáciu môžte odtestovať na : https://martin162000.github.io/utulky/
+........................................................................................
 
-=======
-----------------------------------------------------------------------------------------
-Aplikáciu môžte odtestovať na : https://martin162000.github.io/utulky/
-----------------------------------------------------------------------------------------
->>>>>>> 70d9b76adfa00d581dfd9387537e2af8d0055b29
 # Zadanie Frontend developer GoodRequest
 
 Cieľom zadania je vytvoriť jednoduchú aplikáciu v Reacte, ktorá slúži ako formulár pre nadáciu GoodBoy na podporu slovenských útulkov pre psy. 
@@ -62,16 +58,10 @@ Vizuálna kvalita spracovania aplikácie a štýlovanie je tiež predmetom hodno
 
 
 
-<<<<<<< HEAD
-
-
+........................................................................................
 You can test app on : https://martin162000.github.io/utulky/
+........................................................................................
 
-=======
-----------------------------------------------------------------------------------------
-You can test app on : https://martin162000.github.io/utulky/
-----------------------------------------------------------------------------------------
->>>>>>> 70d9b76adfa00d581dfd9387537e2af8d0055b29
 # Assignement for Frontend developer - GoodRequest
 
 The aim of the assignment is to create a simple application in React that serves as a form for the GoodBoy Foundation to support Slovak shelters for dogs. 

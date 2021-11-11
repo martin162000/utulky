@@ -26,6 +26,8 @@
     margin-top: 52px;
     position: relative;
 
+
+
     label {
         position: relative;
         left: 11px;
@@ -36,6 +38,13 @@
         line-height: 21px;
         color: $primaryColor;
         opacity: 0.8;
+
+        @media (max-width: 461px) {
+            width: 75%;
+            display: block;
+            left: 59px;
+            top: -43px;
+          }
     }
 
     svg {

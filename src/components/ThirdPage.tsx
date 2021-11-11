@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import useForm from '../formActions/useForm'
@@ -34,6 +35,16 @@ const ThirdPage = () => {
 
 
         return (
+            <>
+            <Helmet>‍
+                <title>{t('seoThirdPageTitle')}</title>‍
+                <meta name="description" content={t('seoThirdPageDesc')} />
+                <meta property="og:title" content={t('thirdPageTitle')} />
+                <meta property="og:site_name" content={t('seoThirdPageTitle')}/>
+                <meta property="og:locale" content={t('seoLocale')} />
+                <meta property="og:type" content={t('seoType')}  />
+            </Helmet>
+
             <div className="mainColumn leftFadeIn">
             <PageSteps page={3}/>
             <h1>{t('thirdPageTitle')}</h1>
@@ -51,6 +62,7 @@ const ThirdPage = () => {
             </div>
             </form>
         </div>
+        </>
         )
     
 }

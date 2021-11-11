@@ -75,6 +75,26 @@
     "showErrorMobileBadFormat": "Akceptujeme len formát s predvoľbou +421 | +420",
     "showErrorMobileShort": "Číslo je príliš krátke",
     "showErrorMobilePattern": "Použivate nepovolené znaky",
-    "showErrorConsent": "*Povinne"
+    "showErrorConsent": "*Povinne",
+
+
+    "seoLocale": "sk",
+    "seoType": "article",
+    "seoFirstPageTitle": "GoodBoy - Vybrať pomoc",
+    "seoFirstPageDesc": "Formulár finančnej pomoci pre nadáciu GoodBoy",
+    "seoSecondPageTitle": "GoodBoy - Vyplniť informácie",
+    "seoSecondPageDesc": "Formulár informácií o vás",
+    "seoThirdPageTitle": "GoodBoy - Zobraziť zadané informácie",
+    "seoThirdPageDesc": "Vypísanie informácií o vas",
+    "seoFourthPageTitle": "GoodBoy - Overenie údajov",
+    "seoFourthPageDesc": "Overenie odoslaného formuláru",
+    "seoFourthPageTitleTrue": "GoodBoy - Úspešne odoslanie",
+    "seoFourthPageDescTrue": "Úspešne odoslanie vyplneného formuláru",
+    "seoFourthPageTitleFalse": "GoodBoy - Neúspešne odoslanie",
+    "seoFourthPageDescFalse": "Neúspešne odoslanie vyplneného formuláru",
+    "fourthPageTitle": "Kontrolovanie údajov",
+    "fourthPageTitleTrue": "Úspešne odoslanie formularu",
+    "fourthPageTitleFalse": "Néspešne odoslanie formuláru"
+
     
 }
