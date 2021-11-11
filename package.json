@@ -1,4 +1,5 @@
 {
+  "homepage": "https://martin162000.github.io",
   "name": "utulky",
   "version": "0.1.0",
   "private": true,
@@ -11,6 +12,7 @@
     "@types/node": "^12.0.0",
     "@types/react-redux": "^7.1.20",
     "axios": "^0.24.0",
+    "gh-pages": "^3.2.3",
     "i18next": "^21.4.2",
     "node-sass": "4.14.1",
     "react": "^17.0.2",
@@ -27,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
