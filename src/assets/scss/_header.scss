@@ -27,6 +27,11 @@
         width: rem(24);
         height: rem(24);
         text-align: center;
+        margin: 0 rem(3);
+   
+        a {
+            cursor: pointer;
+        }
 
         img {
             max-width: 100%;
