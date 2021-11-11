@@ -4,18 +4,18 @@
 .reInfo {
     
     h2 {
-        margin: 22px 0px 8px;
+        margin: rem(22) 0 rem(8);
         font-weight: 800;
-        font-size: 14px;
-        line-height: 19px;
+        font-size: rem(14);
+        line-height: rem(19);
         color: $primaryColor;
     }
 
     p {
         font-style: normal;
         font-weight: normal;
-        font-size: 16px;
-        line-height: 19px;
+        font-size: rem(16);
+        line-height: rem(19);
         color: $primaryColor;
         margin: 0;
         padding: 0;
@@ -23,34 +23,34 @@
 }
 
 .reCheckbox {
-    margin-top: 52px;
+    margin-top: rem(52);
     position: relative;
 
 
 
     label {
         position: relative;
-        left: 11px;
-        bottom: 14px;
+        left: rem(11);
+        bottom: rem(14);
         font-style: normal;
         font-weight: normal;
-        font-size: 16px;
-        line-height: 21px;
+        font-size: rem(16);
+        line-height: rem(21);
         color: $primaryColor;
         opacity: 0.8;
 
         @media (max-width: 461px) {
             width: 75%;
             display: block;
-            left: 59px;
-            top: -43px;
+            left: rem(59);
+            top: rem(-43);
           }
     }
 
     svg {
         position: absolute;
-        top: 13px;
-        left: 13px;
+        top: rem(13);
+        left: rem(13);
         display: none;
         z-index: 4;
         pointer-events: none;
@@ -61,16 +61,16 @@
         position: relative;
         z-index: 2;
         cursor: pointer;
-        width: 34px;
-        height: 34px;
+        width: rem(34);
+        height: rem(34);
         appearance: none;
-        border: 1px solid #e9c1ac;
-        border-radius: 8px;
+        border: rem(1) solid #e9c1ac;
+        border-radius: rem(8);
         transition: 0.2s all;
 
         &:checked,
         &:hover {
-            border: 1px solid #F3E2D9;
+            border: rem(1) solid #F3E2D9;
         }
 
         &:checked + svg {
