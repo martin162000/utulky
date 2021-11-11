@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/utulky/static/css/main.b89b9e57.chunk.css",
-    "main.js": "/utulky/static/js/main.a07ae63d.chunk.js",
-    "main.js.map": "/utulky/static/js/main.a07ae63d.chunk.js.map",
-    "runtime-main.js": "/utulky/static/js/runtime-main.6c5c40c2.js",
-    "runtime-main.js.map": "/utulky/static/js/runtime-main.6c5c40c2.js.map",
-    "static/js/2.bbe9d52a.chunk.js": "/utulky/static/js/2.bbe9d52a.chunk.js",
-    "static/js/2.bbe9d52a.chunk.js.map": "/utulky/static/js/2.bbe9d52a.chunk.js.map",
-    "index.html": "/utulky/index.html",
-    "static/css/main.b89b9e57.chunk.css.map": "/utulky/static/css/main.b89b9e57.chunk.css.map",
-    "static/js/2.bbe9d52a.chunk.js.LICENSE.txt": "/utulky/static/js/2.bbe9d52a.chunk.js.LICENSE.txt",
-    "static/media/App.scss": "/utulky/static/media/bgDog.a92ae888.png",
-    "static/media/czech.a448c7d0.png": "/utulky/static/media/czech.a448c7d0.png",
-    "static/media/logoFooter.78833c87.png": "/utulky/static/media/logoFooter.78833c87.png",
-    "static/media/slovakia.837abfc6.png": "/utulky/static/media/slovakia.837abfc6.png"
+    "main.css": "/static/css/main.9f69bf56.chunk.css",
+    "main.js": "/static/js/main.a07ae63d.chunk.js",
+    "main.js.map": "/static/js/main.a07ae63d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d6727a89.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d6727a89.js.map",
+    "static/js/2.bbe9d52a.chunk.js": "/static/js/2.bbe9d52a.chunk.js",
+    "static/js/2.bbe9d52a.chunk.js.map": "/static/js/2.bbe9d52a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.9f69bf56.chunk.css.map": "/static/css/main.9f69bf56.chunk.css.map",
+    "static/js/2.bbe9d52a.chunk.js.LICENSE.txt": "/static/js/2.bbe9d52a.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/static/media/bgDog.a92ae888.png",
+    "static/media/czech.a448c7d0.png": "/static/media/czech.a448c7d0.png",
+    "static/media/logoFooter.78833c87.png": "/static/media/logoFooter.78833c87.png",
+    "static/media/slovakia.837abfc6.png": "/static/media/slovakia.837abfc6.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6c5c40c2.js",
+    "static/js/runtime-main.d6727a89.js",
     "static/js/2.bbe9d52a.chunk.js",
-    "static/css/main.b89b9e57.chunk.css",
+    "static/css/main.9f69bf56.chunk.css",
     "static/js/main.a07ae63d.chunk.js"
   ]
 }
